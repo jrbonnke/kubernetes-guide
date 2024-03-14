@@ -173,6 +173,7 @@ Follow these steps to configure and install Kubernetes on the master instance:
    ```
    sudo kubeadm init --control-plane-endpoint=master-node –upload-certs
    ```
+while initalizing make sure to copy the kubeadm join command, this command will be used to make worker node to get connected to master node
    ```
    mkdir -p $HOME/.kube
    sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
@@ -212,6 +213,4 @@ Apply the Flannel pod network manager:
    ```
 
 ## References
-
-- [PhoenixNAP - Install Kubernetes on Ubuntu](https://phoenixnap.com/kb/install-kubernetes-on-ubuntu)
 - [Kubernetes Documentation - Install kubectl binary with Curl on Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/#install-kubectl-binary-with-curl-on-linux)
